@@ -32,7 +32,7 @@
 	
 	var Moderate = [{
 				name:"Aritzia",
-				style: "feminine"
+				style: "chic"
 			},  {
 				name: "Zara",
 				style: "feminine"
@@ -44,34 +44,37 @@
 				style: "boho"		
 			}];
 	
-	function sortStores(stores){ //making a function to do something, though I haven't told it what yet
+	function sortStores(stores){ // new function that is the following code
 	
+	var TodayStore = []; // empty array
 	
-	/*
-	 * for loop below: I count i beginning at 0, and stop at 4, since I only have 4 items, the ++ means +1
-	 */
-	for(var i=0; i<4; i++){	
+	for(var i=0; i<4; i++){	// count i beginning at 0, and stop at 4, since I only have 4 items, the ++ means +1
 		
-	var Shopping = stores[i];	// replaced Splurges with shopping so I don't have to repeat myself
+	var Shopping = stores[i];	// so I don't have to repeat myself
 
-	/*
-	 * if the store sells chic clothes, great! if not, then not today
-	 */	
-	if(Shopping.style == "chic"){
+	if(Shopping.style == "chic"){ // if the style is chic
 		
-		console.log(Shopping)
+		TodayStore.push(Shopping); // then I'll go there today
 		
 	}else{
 		
-		console.log("not today");				
+		console.log("not today"); // otherwise, I won't go today				
 				
 	} // end of conditional (if and else)
 	} // end of for loop
+	
+	return(TodayStore); // tell me which stores I'm going to
+	
 	} // end of function
 	
-	console.log("picking stores");
-	var TodayStores = sortStores(Moderate);
-	console.log(TodayStores);
+	console.log("picking stores"); 
+	Today = sortStores(Moderate); // out of my moderate stores list, only Aritzia is chic, so that should be my only return
+	console.log(Today);
+	
+	console.log("picking stores"); 
+	Today = sortStores(Splurges); // out of my moderate stores list, only Aritzia is chic, so that should be my only return
+	console.log(Today);
+	
 	
 </script>
 
