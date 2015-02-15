@@ -44,19 +44,19 @@
 				style: "boho"		
 			}];
 	
-	function sortStores(stores){
+	function sortStores(stores){ //making a function to do something, though I haven't told it what yet
+	
+	
 	/*
 	 * for loop below: I count i beginning at 0, and stop at 4, since I only have 4 items, the ++ means +1
 	 */
 	for(var i=0; i<4; i++){	
 		
 	var Shopping = stores[i];	// replaced Splurges with shopping so I don't have to repeat myself
-				
-		
-		
-		console.log(Splurges[i])
-		console.log(Moderate[i])
-		
+
+	/*
+	 * if the store sells chic clothes, great! if not, then not today
+	 */	
 	if(Shopping.style == "chic"){
 		
 		console.log(Shopping)
@@ -68,6 +68,10 @@
 	} // end of conditional (if and else)
 	} // end of for loop
 	} // end of function
+	
+	console.log("picking stores");
+	var TodayStores = sortStores(Moderate);
+	console.log(TodayStores);
 	
 </script>
 
